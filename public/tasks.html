@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Your Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Tasks</h1>
+        
+        <!-- Кнопки для взаимодействия -->
+        <button onclick="loadTasks()">Load Tasks</button>
+        <button onclick="showAddTaskForm()">Add New Task</button>
+        <button onclick="logout()">Logout</button>
+
+        <!-- Форма для добавления задачи -->
+        <div id="add-task-form" style="display: none;">
+            <h2>Add New Task</h2>
+            <input type="text" id="new-task-title" placeholder="Task Title" />
+            <textarea id="new-task-description" placeholder="Task Description"></textarea>
+            <button onclick="addTask()">Add Task</button>
+            <button onclick="hideAddTaskForm()">Cancel</button>
+        </div>
+
+        <!-- Список задач -->
+        <ul id="task-list">
+            <!-- Сюда будут добавляться задачи -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

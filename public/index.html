@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="auth-section">
+            <h1>Диспетчер задач</h1>
+            <div>
+                <h2>Регистрация</h2>
+                <input type="text" id="register-username" placeholder="Username">
+                <input type="password" id="register-password" placeholder="Password">
+                <button onclick="registerUser()">Зарегистрироваться</button>
+            </div>
+            <div>
+                <h2>Авторизация</h2>
+                <input type="text" id="login-username" placeholder="Username">
+                <input type="password" id="login-password" placeholder="Password">
+                <button onclick="loginUser()">Авторизоваться</button>
+            </div>
+        </div>
+
+        <div id="user-section" style="display: none;">
+            <h1>Добро пожаловать, <span id="user-name"></span>!</h1>
+            <button onclick="logout()">Выйти</button>
+            <h2>Твои задачи</h2>
+            <div id="tasks"></div>
+            <h3>Добавить задачу</h3>
+            <input type="text" id="task-title" placeholder="Task Title">
+            <input type="text" id="task-desc" placeholder="Task Description">
+            <button onclick="addTask()">добавить</button>
+        </div>
+
+        <div id="admin-section" style="display: none;">
+            <h1>Панель админа</h1>
+            <button onclick="logout()">Выйти</button>
+            <h2>Пользователи</h2>
+            <div id="users"></div>
+            <div id="admin-user-tasks" style="display: none;">
+                <h3>Задачи пользователей: <span id="admin-selected-user"></span></h3>
+                <div id="user-tasks"></div>
+                <button onclick="closeUserTasks()">Закрыть</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
